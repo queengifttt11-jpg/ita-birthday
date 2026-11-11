@@ -357,15 +357,11 @@ body {
 
 /* =========================================================
    PAGE 1
-   REFERENSI SCREENSHOT
 ========================================================= */
 
 #page1 .content {
   transform: translateY(-2vh);
 }
-
-
-/* tulisan kecil paling atas */
 
 .page1-top {
   font-family: "Montserrat", sans-serif;
@@ -380,9 +376,6 @@ body {
 
   margin-bottom: 18px;
 }
-
-
-/* TITLE */
 
 .page1-title {
   font-family: "Cormorant Garamond", serif;
@@ -399,9 +392,6 @@ body {
 
   white-space: nowrap;
 }
-
-
-/* MADE WITH LOVE */
 
 .page1-love {
   margin-top: 15px;
@@ -422,9 +412,6 @@ body {
     0 0 20px rgba(211,184,111,.08);
 }
 
-
-/* GARIS */
-
 .page1-line {
   width: 55px;
   height: 1px;
@@ -440,9 +427,6 @@ body {
     );
 }
 
-
-/* TEXT KECIL BAWAH */
-
 .page1-small {
   font-size: 7px;
 
@@ -454,9 +438,6 @@ body {
 
   line-height: 1.8;
 }
-
-
-/* BUTTON */
 
 .page1-button {
   margin-top: 30px;
@@ -651,22 +632,12 @@ body {
 
   from {
     opacity: 0;
-
-    transform:
-      translateY(30px)
-      scale(.92);
-
-    filter: blur(5px);
+    transform: translateY(25px) scale(.96);
   }
 
   to {
     opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-
-    filter: blur(0);
+    transform: translateY(0) scale(1);
   }
 
 }
@@ -679,165 +650,20 @@ body {
 
   display: block;
 
-  filter: saturate(.75);
+  transition: transform .7s ease;
 }
 
-.gallery-caption {
-  font-size: 8px;
-
-  letter-spacing: 2px;
-
-  color: rgba(255,255,255,.35);
+.gallery-item:hover img {
+  transform: scale(1.04);
 }
 
 
 /* =========================================================
-   PAGE 4 MEMORY
+   PAGE 4
 ========================================================= */
 
-.memory-wrap {
-  width: 100%;
-}
-
-.memory-card {
-  width: min(100%, 390px);
-
-  margin: auto;
-
-  overflow: hidden;
-
-  background: #101216;
-
-  border: 1px solid rgba(255,255,255,.09);
-
-  box-shadow:
-    0 25px 70px rgba(0,0,0,.45);
-
-  touch-action: pan-y;
-
-  transition:
-    transform .45s ease,
-    opacity .35s ease;
-}
-
-.memory-card.memory-changing {
-  transform:
-    scale(.96)
-    translateY(8px);
-
-  opacity: .35;
-}
-
-.memory-image {
-  width: 100%;
-
-  aspect-ratio: 4 / 5;
-
-  overflow: hidden;
-}
-
-.memory-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-  filter: saturate(.78);
-
-  transition:
-    opacity .35s ease,
-    transform .7s ease;
-}
-
-.memory-info {
-  padding: 18px;
-
-  text-align: left;
-}
-
-.memory-number {
-  font-size: 8px;
-
-  letter-spacing: 3px;
-
-  color: #bca66e;
-
-  margin-bottom: 7px;
-}
-
-.memory-title {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 28px;
-
-  font-weight: 500;
-
-  margin-bottom: 5px;
-}
-
-.memory-text {
-  font-size: 10px;
-
-  line-height: 1.7;
-
-  color: rgba(255,255,255,.5);
-}
-
-.memory-navigation {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 12px;
-
-  margin-top: 15px;
-}
-
-.memory-arrow {
-  width: 38px;
-  height: 38px;
-
-  border: 1px solid rgba(255,255,255,.15);
-
-  background: rgba(255,255,255,.03);
-
-  color: #eee;
-
-  cursor: pointer;
-
-  font-size: 18px;
-}
-
-.memory-arrow:active {
-  transform: scale(.88);
-}
-
-.dots {
-  display: flex;
-
-  gap: 5px;
-}
-
-.dot {
-  width: 5px;
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: rgba(255,255,255,.2);
-
-  transition: .35s ease;
-}
-
-.dot.active {
-  width: 17px;
-
-  border-radius: 10px;
-
-  background: #bda66f;
+#page4 .gallery {
+  margin-bottom: 18px;
 }
 
 
@@ -845,10 +671,27 @@ body {
    PAGE 5
 ========================================================= */
 
-.birthday-title {
-  font-size: clamp(58px, 17vw, 125px);
+#page5 {
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-items: flex-start;
+}
 
-  line-height: .8;
+#page5 .content {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.birthday-title {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(48px, 13vw, 90px);
+
+  line-height: .9;
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
 
   margin-bottom: 25px;
 }
@@ -856,107 +699,29 @@ body {
 .birthday-title span {
   display: block;
 
-  font-family: "Montserrat", sans-serif;
-
-  font-size: .4em;
+  font-size: .55em;
 
   letter-spacing: 5px;
 
-  line-height: 1;
-
-  margin-bottom: 15px;
-
   color: #bda66f;
 
-  font-weight: 400;
+  margin-bottom: 7px;
 }
 
 .birthday-text {
-  max-width: 480px;
+  width: min(100%, 650px);
 
-  font-size: 11px;
+  font-size: 12px;
 
-  line-height: 1.9;
+  line-height: 2;
 
-  color: rgba(255,255,255,.58);
+  color: rgba(245,242,234,.72);
 
-  margin-bottom: 26px;
-}
+  text-align: center;
 
+  white-space: pre-line;
 
-/* =========================================================
-   FIREWORK
-========================================================= */
-
-.firework {
-  position: absolute;
-
-  width: 3px;
-  height: 3px;
-
-  border-radius: 50%;
-
-  background: #d4ba77;
-
-  opacity: 0;
-
-  pointer-events: none;
-}
-
-.firework.one {
-  top: 20%;
-  left: 18%;
-
-  animation:
-    firework 3s infinite 1s;
-}
-
-.firework.two {
-  top: 25%;
-  right: 15%;
-
-  animation:
-    firework 3s infinite 2s;
-}
-
-.firework.three {
-  top: 45%;
-  left: 10%;
-
-  animation:
-    firework 3s infinite 1.5s;
-}
-
-@keyframes firework {
-
-  0% {
-    opacity: 0;
-    transform: scale(.2);
-  }
-
-  20% {
-    opacity: 1;
-
-    box-shadow:
-      0 -35px 0 #d4ba77,
-      0 35px 0 #d4ba77,
-      35px 0 0 #d4ba77,
-      -35px 0 0 #d4ba77,
-      25px 25px 0 #d4ba77,
-      -25px -25px 0 #d4ba77,
-      25px -25px 0 #d4ba77,
-      -25px 25px 0 #d4ba77;
-  }
-
-  60% {
-    opacity: 0;
-    transform: scale(1);
-  }
-
-  100% {
-    opacity: 0;
-  }
-
+  margin-bottom: 30px;
 }
 
 
@@ -969,16 +734,17 @@ body {
 
   inset: 0;
 
-  background: #060708;
+  z-index: 5000;
+
+  background: #070809;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   flex-direction: column;
-
-  z-index: 9999;
 
   transition:
     opacity .8s ease,
@@ -987,16 +753,14 @@ body {
 
 #loading.hide {
   opacity: 0;
-
   visibility: hidden;
-
   pointer-events: none;
 }
 
-.loading-label {
+.loading-small {
   font-size: 8px;
 
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 
   color: rgba(255,255,255,.35);
 
@@ -1006,199 +770,34 @@ body {
 #countdown {
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 85px;
-
-  font-weight: 400;
+  font-size: 70px;
 
   color: #d3b86f;
-}
 
-.loading-line {
-  width: 75px;
-  height: 1px;
-
-  background: rgba(211,184,111,.3);
-
-  margin-top: 22px;
-
-  overflow: hidden;
-}
-
-.loading-line::after {
-  content: "";
-
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  background: #d3b86f;
-
-  transform-origin: left;
-
-  animation:
-    loadingLine 3s linear;
-}
-
-@keyframes loadingLine {
-
-  from {
-    transform: scaleX(0);
-  }
-
-  to {
-    transform: scaleX(1);
-  }
-
+  line-height: 1;
 }
 
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
 
   .page {
-    padding:
-      max(25px, env(safe-area-inset-top))
-      20px
-      max(25px, env(safe-area-inset-bottom))
-      20px;
-  }
-
-  .page1-title {
-    font-size: clamp(46px, 14vw, 72px);
-  }
-
-  .page1-love {
-    font-size: clamp(25px, 7vw, 36px);
-  }
-
-  .page1-top {
-    font-size: 6px;
-    letter-spacing: 3.5px;
-  }
-
-  .page1-small {
-    font-size: 6px;
-    letter-spacing: 2.5px;
-  }
-
-  .page1-button {
-    font-size: 7px;
-    padding: 11px 24px;
-  }
-
-  .title {
-    font-size: clamp(50px, 16vw, 82px);
-  }
-
-  .subtitle {
-    max-width: 310px;
-  }
-
-  .btn {
-    min-width: 180px;
-    min-height: 53px;
-    font-size: 9px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .gallery {
-    max-width: 350px;
-  }
-
-  .memory-card {
-    max-width: 350px;
+    max-width: 330px;
   }
 
   .birthday-text {
-    max-width: 320px;
-    font-size: 10px;
+    font-size: 11px;
+    line-height: 1.9;
   }
 
-}
-
-
-/* =========================================================
-   SHORT PHONE
-========================================================= */
-
-@media (max-height: 700px) {
-
-  .page1-top {
-    margin-bottom: 12px;
-  }
-
-  .page1-love {
-    margin-top: 11px;
-  }
-
-  .page1-line {
-    margin-top: 18px;
-    margin-bottom: 12px;
-  }
-
-  .page1-button {
-    margin-top: 20px;
-  }
-
-  .gallery {
-    max-width: 310px;
-  }
-
-  .memory-card {
-    max-width: 310px;
-  }
-
-}
-
-
-/* =========================================================
-   VERY SMALL PHONE
-========================================================= */
-
-@media (max-width: 360px) {
-
-  .page {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .page1-title {
-    font-size: 43px;
-  }
-
-  .page1-love {
-    font-size: 25px;
-  }
-
-  .gallery {
-    max-width: 295px;
-  }
-
-  .memory-card {
-    max-width: 295px;
-  }
-
-}
-
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-button {
-  -webkit-appearance: none;
-  appearance: none;
-
-  outline: none;
-}
-
-button:focus-visible {
-  outline: 1px solid #d4ba77;
-
-  outline-offset: 4px;
 }
 
 </style>
@@ -1214,7 +813,7 @@ button:focus-visible {
 
 <div id="loading">
 
-  <div class="loading-label">
+  <div class="loading-small">
     A LITTLE SURPRISE
   </div>
 
@@ -1222,27 +821,19 @@ button:focus-visible {
     3
   </div>
 
-  <div class="loading-line"></div>
-
-</div>
-
-
-<!-- =======================================================
-     BACKGROUND
-======================================================= -->
-
-<div class="background-effects">
-
-  <div class="glow"></div>
-
-  <div class="stars" id="stars"></div>
-
 </div>
 
 
 <!-- =======================================================
      MUSIC
 ======================================================= -->
+
+<audio
+  id="music"
+  src="music.mp3"
+  loop
+  preload="auto"
+></audio>
 
 <button
   class="music-btn"
@@ -1252,12 +843,32 @@ button:focus-visible {
   ♪
 </button>
 
-<audio
-  id="music"
-  src="music.mp3"
-  loop
-  preload="auto"
-></audio>
+
+<!-- =======================================================
+     BACKGROUND EFFECTS
+======================================================= -->
+
+<div class="background-effects">
+
+  <div class="stars" id="stars"></div>
+
+  <div
+    class="glow"
+    style="
+      top:10%;
+      left:-100px;
+    "
+  ></div>
+
+  <div
+    class="glow"
+    style="
+      bottom:-100px;
+      right:-100px;
+    "
+  ></div>
+
+</div>
 
 
 <!-- =======================================================
@@ -1279,40 +890,23 @@ button:focus-visible {
 
   <div class="content">
 
-    <!-- tulisan kecil seperti referensi -->
-
     <div class="page1-top">
-      FOR THE SPECIAL PERSON
+      A LITTLE SURPRISE
     </div>
-
-
-    <!-- title utama -->
 
     <h1 class="page1-title">
-      A Little Surprise
+      HAPPY BIRTHDAY
     </h1>
 
-
-    <!-- tulisan gold -->
-
     <div class="page1-love">
-      Made With Love
+        Made With Love
     </div>
-
-
-    <!-- garis -->
 
     <div class="page1-line"></div>
 
-
-    <!-- tulisan kecil -->
-
     <div class="page1-small">
-      SOMETHING I MADE JUST FOR YOU
+      JUST FOR YOU
     </div>
-
-
-    <!-- button -->
 
     <button
       class="page1-button next-btn"
@@ -1339,25 +933,27 @@ button:focus-visible {
   <div class="content">
 
     <div class="kicker">
-      THIS IS FOR
+      THIS ONE IS FOR
     </div>
 
     <h1 class="title name-title">
-      USAM PUTRA
+      USAM
+      <br>
+      PUTRA
     </h1>
 
     <div class="name-line"></div>
 
     <p class="subtitle">
-      Untuk seseorang yang punya tempat
-      spesial di hidupku.
+      A small surprise for someone
+      who deserves a little happiness today.
     </p>
 
     <button
       class="btn next-btn"
       data-next="3"
     >
-      LET IT BEGIN
+      CONTINUE
     </button>
 
   </div>
@@ -1378,7 +974,7 @@ button:focus-visible {
   <div class="content">
 
     <div class="kicker">
-      SOME MOMENTS
+      LITTLE MOMENTS
     </div>
 
     <div class="gallery">
@@ -1386,38 +982,32 @@ button:focus-visible {
       <div class="gallery-item">
         <img
           src="foto1.jpg"
-          alt="Memory 1"
+          alt=""
         >
       </div>
 
       <div class="gallery-item">
         <img
           src="foto2.jpg"
-          alt="Memory 2"
+          alt=""
         >
       </div>
 
       <div class="gallery-item">
         <img
           src="foto3.jpg"
-          alt="Memory 3"
+          alt=""
         >
       </div>
 
       <div class="gallery-item">
         <img
           src="foto4.jpg"
-          alt="Memory 4"
+          alt=""
         >
       </div>
 
     </div>
-
-    <p class="gallery-caption">
-      A FEW OF MY FAVORITE MOMENTS
-    </p>
-
-    <br>
 
     <button
       class="btn next-btn"
@@ -1444,83 +1034,42 @@ button:focus-visible {
   <div class="content">
 
     <div class="kicker">
-      OUR MEMORIES
+      MORE MEMORIES
     </div>
 
-    <div class="memory-wrap">
+    <div class="gallery">
 
-      <div
-        class="memory-card"
-        id="memoryCard"
-      >
-
-        <div class="memory-image">
-
-          <img
-            id="memoryImage"
-            src="foto1.jpg"
-            alt="Memory"
-          >
-
-        </div>
-
-        <div class="memory-info">
-
-          <div
-            class="memory-number"
-            id="memoryNumber"
-          >
-            MEMORY 01
-          </div>
-
-          <h2
-            class="memory-title"
-            id="memoryTitle"
-          >
-            One of my favorites.
-          </h2>
-
-          <p
-            class="memory-text"
-            id="memoryText"
-          >
-            Mungkin sederhana, tapi momen kecil
-            seperti ini selalu punya tempat sendiri
-            buat aku.
-          </p>
-
-        </div>
-
+      <div class="gallery-item">
+        <img
+          src="foto5.jpg"
+          alt=""
+        >
       </div>
 
-
-      <div class="memory-navigation">
-
-        <button
-          class="memory-arrow"
-          id="prevMemory"
+      <div class="gallery-item">
+        <img
+          src="foto6.jpg"
+          alt=""
         >
-          ‹
-        </button>
+      </div>
 
-        <div
-          class="dots"
-          id="dots"
-        ></div>
-
-        <button
-          class="memory-arrow"
-          id="nextMemory"
+      <div class="gallery-item">
+        <img
+          src="foto7.jpg"
+          alt=""
         >
-          ›
-        </button>
+      </div>
 
+      <div class="gallery-item">
+        <img
+          src="foto8.jpg"
+          alt=""
+        >
       </div>
 
     </div>
 
-    <br>
-
+    <!-- FIX: sebelumnya data-next="4" -->
     <button
       class="btn next-btn"
       data-next="5"
@@ -1543,15 +1092,7 @@ button:focus-visible {
   data-page="5"
 >
 
-  <div class="firework one"></div>
-  <div class="firework two"></div>
-  <div class="firework three"></div>
-
   <div class="content">
-
-    <div class="kicker">
-      ONE LAST THING
-    </div>
 
     <h1 class="title birthday-title">
 
@@ -1565,19 +1106,72 @@ button:focus-visible {
 
     <p class="birthday-text">
 
-      Selamat ulang tahun, Usam Putra.
-      Semoga di umur yang baru ini
-      ada lebih banyak hal baik yang datang,
-      lebih banyak alasan untuk tersenyum,
-      dan semoga semua yang kamu inginkan
-      perlahan bisa tercapai.
+  Selamat ulang tahun,  sayang. 🤍
+  Hari ini adalah tentang kamu, tentang bertambahnya satu tahun
+  lagi dalam perjalanan hidup kamu, dan tentang semua hal baik
+  yang semoga datang setelah hari ini.
 
-      <br><br>
+  <br><br>
 
-      Thank you for being you.
-      I'm really glad I got to know you.
+  Di umur yang baru ini, aku berharap kamu selalu diberikan
+  kesehatan, kebahagiaan, dan banyak hal baik yang mungkin
+  selama ini kamu tunggu. Semoga langkah kamu selalu dimudahkan,
+  semua urusan kamu dilancarkan, dan apa pun yang sedang kamu
+  perjuangkan bisa perlahan menemukan jalannya.
 
-    </p>
+  <br><br>
+
+  Kalau nanti ada hari yang terasa berat, semoga kamu selalu
+  ingat kalau kamu nggak harus melewati semuanya sendirian.
+  Ada seseorang yang selalu senang melihat kamu bahagia,
+  selalu ikut bangga dengan setiap pencapaian kecil maupun besar
+  yang kamu punya, dan selalu berharap kamu baik-baik saja.
+
+  <br><br>
+
+  Terima kasih ya, sayang, sudah hadir dan menjadi bagian dari
+  cerita hidup aku. Terima kasih untuk semua waktu, perhatian,
+  candaan, cerita, dan hal-hal kecil yang mungkin terlihat
+  sederhana, tapi ternyata berarti banyak buat aku.
+
+  <br><br>
+
+  I may not always say it perfectly,
+  but I hope you know how much you mean to me.
+  I'm really grateful that I got to know you,
+  to share little moments with you,
+  and to have someone like you in my life.
+
+  <br><br>
+
+  Semoga di tahun ini kamu bisa lebih banyak tersenyum,
+  lebih banyak mendapatkan hal yang kamu inginkan,
+  dan lebih sedikit merasakan hal-hal yang membuat kamu sedih.
+  Semoga kamu selalu dikelilingi orang-orang yang tulus,
+  termasuk aku yang akan selalu senang melihat kamu bahagia.
+
+  <br><br>
+
+  Sekali lagi, happy birthday, sayang.
+  Semoga umur yang baru ini membawa cerita-cerita baru
+  yang jauh lebih indah untuk kamu.
+  Jangan lupa untuk selalu menjaga diri,
+  tetap jadi Usam yang aku kenal,
+  dan terus berjalan sejauh yang kamu mau.
+
+  <br><br>
+
+  I'm really glad you exist.
+  And I'm even more glad that somehow,
+  our paths crossed.
+
+  <br><br>
+
+  Happy birthday, sayang. 🤍
+  Semoga hari ini menjadi awal dari banyak hal indah
+  yang akan datang untuk kamu.
+
+</p>
 
     <button
       class="btn"
@@ -1643,8 +1237,6 @@ function goToPage(targetPage) {
     targetPage > currentPage;
 
 
-  /* posisi awal target */
-
   target.style.transition = "none";
 
   target.style.transform =
@@ -1661,8 +1253,6 @@ function goToPage(targetPage) {
   target.offsetHeight;
 
 
-  /* current keluar */
-
   current.classList.remove("active");
 
   if (goingForward) {
@@ -1675,8 +1265,6 @@ function goToPage(targetPage) {
 
   }
 
-
-  /* target masuk */
 
   requestAnimationFrame(() => {
 
@@ -1781,320 +1369,6 @@ document
 
 
 /* =========================================================
-   MEMORY DATA
-========================================================= */
-
-const memories = [
-
-  {
-    image: "foto1.jpg",
-
-    title:
-      "One of my favorites.",
-
-    text:
-      "Mungkin sederhana, tapi momen kecil seperti ini selalu punya tempat sendiri buat aku."
-  },
-
-  {
-    image: "foto2.jpg",
-
-    title:
-      "A good memory.",
-
-    text:
-      "Ada beberapa momen yang nggak perlu terlalu banyak cerita. Cukup diingat dan disimpan."
-  },
-
-  {
-    image: "foto3.jpg",
-
-    title:
-      "This moment.",
-
-    text:
-      "Salah satu foto yang setiap kali dilihat selalu berhasil bikin aku senyum."
-  },
-
-  {
-    image: "foto4.jpg",
-
-    title:
-      "And many more.",
-
-    text:
-      "Semoga ke depannya masih ada banyak cerita dan momen baik yang bisa kita simpan."
-  }
-
-];
-
-let currentMemory = 0;
-
-
-const memoryImage =
-  document.getElementById("memoryImage");
-
-const memoryNumber =
-  document.getElementById("memoryNumber");
-
-const memoryTitle =
-  document.getElementById("memoryTitle");
-
-const memoryText =
-  document.getElementById("memoryText");
-
-const memoryCard =
-  document.getElementById("memoryCard");
-
-const dots =
-  document.getElementById("dots");
-
-
-/* =========================================================
-   DOTS
-========================================================= */
-
-memories.forEach(
-  (_, index) => {
-
-    const dot =
-      document.createElement("div");
-
-    dot.className = "dot";
-
-    if (index === 0) {
-
-      dot.classList.add("active");
-
-    }
-
-    dot.addEventListener(
-      "click",
-      () => {
-
-        currentMemory = index;
-
-        updateMemory();
-
-      }
-    );
-
-    dots.appendChild(dot);
-
-  }
-);
-
-
-/* =========================================================
-   UPDATE MEMORY
-========================================================= */
-
-function updateMemory() {
-
-  const memory =
-    memories[currentMemory];
-
-  memoryCard.classList.add(
-    "memory-changing"
-  );
-
-  setTimeout(() => {
-
-    memoryImage.style.opacity = "0";
-
-    memoryImage.style.transform =
-      "scale(1.04)";
-
-  }, 80);
-
-
-  setTimeout(() => {
-
-    memoryImage.src =
-      memory.image;
-
-    memoryTitle.textContent =
-      memory.title;
-
-    memoryText.textContent =
-      memory.text;
-
-    memoryNumber.textContent =
-      `MEMORY ${String(
-        currentMemory + 1
-      ).padStart(2, "0")}`;
-
-
-    document
-      .querySelectorAll(".dot")
-      .forEach(
-        (dot, index) => {
-
-          dot.classList.toggle(
-            "active",
-            index === currentMemory
-          );
-
-        }
-      );
-
-  }, 220);
-
-
-  setTimeout(() => {
-
-    memoryImage.style.opacity = "1";
-
-    memoryImage.style.transform =
-      "scale(1)";
-
-    memoryCard.classList.remove(
-      "memory-changing"
-    );
-
-  }, 400);
-
-}
-
-
-/* =========================================================
-   PREVIOUS MEMORY
-========================================================= */
-
-document
-  .getElementById("prevMemory")
-  .addEventListener(
-    "click",
-    () => {
-
-      currentMemory--;
-
-      if (currentMemory < 0) {
-
-        currentMemory =
-          memories.length - 1;
-
-      }
-
-      updateMemory();
-
-    }
-  );
-
-
-/* =========================================================
-   NEXT MEMORY
-========================================================= */
-
-document
-  .getElementById("nextMemory")
-  .addEventListener(
-    "click",
-    () => {
-
-      currentMemory++;
-
-      if (
-        currentMemory >=
-        memories.length
-      ) {
-
-        currentMemory = 0;
-
-      }
-
-      updateMemory();
-
-    }
-  );
-
-
-/* =========================================================
-   MEMORY SWIPE
-========================================================= */
-
-let memoryStartX = 0;
-let memoryStartY = 0;
-
-memoryCard.addEventListener(
-  "touchstart",
-  event => {
-
-    memoryStartX =
-      event.touches[0].clientX;
-
-    memoryStartY =
-      event.touches[0].clientY;
-
-  },
-  {
-    passive: true
-  }
-);
-
-
-memoryCard.addEventListener(
-  "touchend",
-  event => {
-
-    const endX =
-      event.changedTouches[0].clientX;
-
-    const endY =
-      event.changedTouches[0].clientY;
-
-    const diffX =
-      endX - memoryStartX;
-
-    const diffY =
-      endY - memoryStartY;
-
-    if (
-      Math.abs(diffX) > 50 &&
-      Math.abs(diffX) >
-      Math.abs(diffY)
-    ) {
-
-      if (diffX < 0) {
-
-        currentMemory++;
-
-        if (
-          currentMemory >=
-          memories.length
-        ) {
-
-          currentMemory = 0;
-
-        }
-
-      }
-
-      else {
-
-        currentMemory--;
-
-        if (currentMemory < 0) {
-
-          currentMemory =
-            memories.length - 1;
-
-        }
-
-      }
-
-      updateMemory();
-
-    }
-
-  },
-  {
-    passive: true
-  }
-);
-
-
-/* =========================================================
    PAGE SWIPE
 ========================================================= */
 
@@ -2123,14 +1397,11 @@ document.addEventListener(
   "touchend",
   event => {
 
-    if (
-      event.target.closest(".memory-card") ||
-      event.target.closest(".memory-navigation")
-    ) {
-
-      return;
-
-    }
+    /*
+      MEMORY DATA sudah dihapus karena elemen
+      .memory-card dan .memory-navigation
+      memang tidak ada di HTML.
+    */
 
     const endX =
       event.changedTouches[0].clientX;
